@@ -22,8 +22,7 @@ for i in range(2):
     inputnumbers = int(input('Submit your {} number: '.format(i)))
     calculatorlist.append(inputnumbers)
 # Assign lists to values
-x = calculatorlist[0]
-y = calculatorlist[1]
+x, y = calculatorlist[0], calculatorlist[1]
 # Create an object and assign values for calculating
 calculator = Calculator(x, y)
 # Call the calculator function for makin' operations
