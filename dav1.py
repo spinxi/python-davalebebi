@@ -7,28 +7,27 @@ class Calculator:
         numbers.x = x
         numbers.y = y
     # Create function that makes operations
-    def calculateIt(calcNumbers):
+    def calculateit(calcnumbers):
         print(
-            'Sum is:', calcNumbers.x + calcNumbers.y,
-            '\nSubtract is:', calcNumbers.x - calcNumbers.y,
-            '\nMultiply is:', calcNumbers.x * calcNumbers.y,
-            '\nDivide is:', calcNumbers.x / calcNumbers.y
+            'Sum is:', calcnumbers.x + calcnumbers.y,
+            '\nSubtract is:', calcnumbers.x - calcnumbers.y,
+            '\nMultiply is:', calcnumbers.x * calcnumbers.y,
+            '\nDivide is:', calcnumbers.x / calcnumbers.y
             )
 # Create an empty list for input numbers
-calculatorList = []
+calculatorlist = []
 # Create loop for input to run two times
 for i in range(2):
     i+=1
-    inputNumbers = int(input('Submit your {} number: '.format(i)))
-    calculatorList.append(inputNumbers)
+    inputnumbers = int(input('Submit your {} number: '.format(i)))
+    calculatorlist.append(inputnumbers)
 # Assign lists to values
-x = calculatorList[0]
-y = calculatorList[1]
+x = calculatorlist[0]
+y = calculatorlist[1]
 # Create an object and assign values for calculating
 calculator = Calculator(x, y)
 # Call the calculator function for makin' operations
-calculator.calculateIt()
-#OKAY THAT'S IT
+calculator.calculateit()
 #---------------------------------------------------- </1> ----------------------------------------------------
 
 
@@ -53,14 +52,14 @@ class Employee:
         data.oldage = oldage
         data.oldsalary = oldsalary
     # Create first function
-    def printingLowest(dataRead):
+    def printing(dataread):
         print(
-            'The poorest employer is:', dataRead.poorname, dataRead.poorsurname, 
-            ', Age:', dataRead.poorage, 
-            ', Salary:', dataRead.poorsalary, 'GEL',
-            '\nThe oldest employer is:', dataRead.oldname, dataRead.oldrsurname,
-            ', Age:', dataRead.oldage,  
-            ', Salary:', dataRead.oldsalary, 'GEL'
+            'The poorest employer is:', dataread.poorname, dataread.poorsurname, 
+            ', Age:', dataread.poorage, 
+            ', Salary:', dataread.poorsalary, 'GEL',
+            '\nThe oldest employer is:', dataread.oldname, dataread.oldrsurname,
+            ', Age:', dataread.oldage,  
+            ', Salary:', dataread.oldsalary, 'GEL'
             )
 # Let's open our .csv file
 with open('data.csv') as csvFile:
@@ -78,21 +77,20 @@ with open('data.csv') as csvFile:
         age.append(col['age'])
         salary.append(col['salary'])
 # Let's find out min & max indexes
-indexMinSalary = salary.index(min(salary))
-indexMaxAge = age.index(max(age))
-minSalary = Employee(
+indexminsalary = salary.index(min(salary))
+indexmaxage = age.index(max(age))
+minsalary = Employee(
     # Min salary
-    name[indexMinSalary], 
-    surname[indexMinSalary], 
-    age[indexMinSalary], 
-    salary[indexMinSalary],
+    name[indexminsalary], 
+    surname[indexminsalary], 
+    age[indexminsalary], 
+    salary[indexminsalary],
     # Max age
-    name[indexMaxAge], 
-    surname[indexMaxAge], 
-    age[indexMaxAge], 
-    salary[indexMaxAge]
+    name[indexmaxage], 
+    surname[indexmaxage], 
+    age[indexmaxage], 
+    salary[indexmaxage]
     )
 # Call the function to print it
-minSalary.printingLowest()
-#OKAT THAT'S IT
+minsalary.printing()
 #---------------------------------------------------- </2> ----------------------------------------------------
