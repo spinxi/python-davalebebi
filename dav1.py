@@ -62,9 +62,6 @@ class Employee:
             ', Age:', dataRead.oldage,  
             ', Salary:', dataRead.oldsalary, 'GEL'
             )
-    # # Create first function    
-    # def printingOldest(dataRead):
-    #     print('The oldest employer is:', dataRead.name, dataRead.surname, ', Salary:', dataRead.salary, 'GEL')
 # Let's open our .csv file
 with open('data.csv') as csvFile:
     # Create dictreader object
