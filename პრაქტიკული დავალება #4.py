@@ -1,5 +1,5 @@
 
-import urllib.request, os
+import urllib.request
 import requests 
 from bs4 import BeautifulSoup 
 def getdata(url): 
